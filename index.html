@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player using Javascript</title>
+    <link rel="stylesheet" href="icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<!-- 
+    angle-down -> chevron-down
+    repeat icon -> arrow-repeat
+    shuffle -> shuffle
+    play -> play / play-fill
+    next => skip-end-fill
+    previous -> skip-start-fill
+    music list -> music-note-list
+    more -> three-dots
+-->
+
+<div class="wrapper">
+    <div class="top-bar">
+        <span class="bi bi-chevron-down angle_down"></span>
+        <span>Now Playing</span>
+        <span class="bi bi-three-dots more"></span>
+    </div>
+
+    <div class="img-area">
+        <img src="" alt="">
+    </div>
+
+    <div class="song-details">
+        <p class="name"></p>
+        <p class="artist"></p>
+    </div>
+    
+    <div class="progress-area">
+        <div class="progress-bar">
+        </div>
+        <div class="timer">
+            <span class="current">0:00</span>
+            <span class="duration"></span>
+        </div>
+        <audio id="main-audio" src=""></audio>
+    </div>
+
+    <div class="controls">
+        <span id="repeat" class="bi bi-repeat" title="playlist looped"></span>
+        <span id="prev" class="bi bi-skip-start-fill"></span>
+        <div class="play-pause">
+            <span class="bi bi-play-fill"></span>
+        </div>
+        <span id="next" class="bi bi-skip-end-fill"></span>
+        <span id="more-music" class="bi bi-music-note-list"></span>
+    </div>
+
+    <div class="music-list">
+        <div class="header">
+            <div class="row">
+                <span class="bi bi-music-note-list"></span>
+                <span>Music List</span>
+            </div>
+            <span id="close" class="i bi-x"></span>
+        </div>
+        <ul>
+        </ul>
+    </div>
+</div>
+
+<script src="music-list.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
