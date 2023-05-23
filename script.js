@@ -260,28 +260,3 @@ function clicked(element) {
     playMusic();
     playingNow();
 }
-
-function showExtra() {
-    extra.style.display = "none";
-    let emptyArr = [];
-    let newNameOfSong;
-
-    //get each of the titles of the songs using the forEach loop;
-    nameOfSong.forEach(title => {
-        if(title.textContent.length >= 20) {
-            //first split the name of the song into  by the space character and assign it to an empty array variable
-            emptyArr = title.textContent.split(" ");
-            // splice that array variable from 1st to 3rd word and assign it to the newTitle variable you created
-            newNameOfSong = emptyArr.splice(0, 3);
-            //Then after splicing, you join the spliced words together using the join method and a seperator.
-            newNameOfSong = newNameOfSong.join(" ");
-            //then you display it into the UI
-            title.textContent = newNameOfSong;
-            extra.style.display = "inline";
-        }
-        else {
-            extra.style.display = "none";
-            console.log("it is less than");
-        }
-    });
-}
